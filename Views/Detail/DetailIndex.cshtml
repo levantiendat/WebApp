@@ -1,0 +1,52 @@
+﻿@model List<WebApp1.Models.Show001>
+@{
+	ViewData["Title"] = "Home Page";
+}
+<div id='hello' style="Z-INDEX: 102; OVERFLOW:
+            auto; WIDTH: auto; POSITION: center; HEIGHT: 600px">
+
+	<table class="table">
+
+		<tr>
+			<th>STT</th>
+			<th>Mã lớp</th>
+			<th>Tên lớp học phần</th>
+			<th>TC</th>
+			<th>Giảng viên</th>
+			<th>Thời khóa biểu</th>
+			<th>Tuần</th>
+			<th>[SL]</th>
+			<th>ĐK</th>
+			<th>[Dự bị]</th>
+			<th>Dự bị</th>
+			<th>CLC</th>
+		</tr>
+
+
+		@{
+			int j = 1;
+		}
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>@j</td>
+				<td>@item.MALOPHOCPHAN</td>
+				<td>@item.TENLOP</td>
+				<td>@item.TC</td>
+				<td>@item.GV</td>
+				<td>@item.TKB</td>
+				<td>@item.week</td>
+				<td>@item.SL</td>
+				<td>@item.DK</td>
+				<td>@item.ndb</td>
+				<td>@item.db</td>
+				<td>@item.clc</td>
+			</tr>
+			j++;
+
+
+		}
+	</table>
+
+
+</div>

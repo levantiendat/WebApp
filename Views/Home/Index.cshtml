@@ -1,0 +1,245 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+
+}
+<style>
+    div {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    button {
+        flex-grow: 1;
+    }
+</style>
+<div style="background-color: black">
+    <button style="color:white;background-color:darkblue;text-align:center;font-size:12px">Trang chủ</button>
+    <button style="color:white;background-color:darkblue;text-align:center;font-size:12px">DUT-SIS</button>
+    <button style="color:white;background-color:darkblue;text-align:center;font-size:12px">Lớp học phần</button>
+    <button style="color:white;background-color:darkblue;text-align:center;font-size:12px">Tình trạng đăng kí mở lớp bổ sung</button>
+    <button style="color:white;background-color:darkblue;text-align:center;font-size:12px">Danh sách sinh viên</button>
+    <button style="color:white;background-color:darkblue;text-align:center;font-size:12px">Thống kê KLHT</button>
+    <button style="color:white;background-color:darkblue;text-align:center;font-size:12px">Cổng thông tin hỗ trợ trực tuyến</button>
+</div>
+<div>
+    <button style="color:blue;background-color:lightgrey;text-align:center;font-size:16px">HƯỚNG DẪN ĐĂNG KÍ HỌC</button>
+    <button style="color:blue;background-color:lightgrey;text-align:center;font-size:16px">KẾ HOẠCH NĂM HỌC</button>
+    <button style="color:blue;background-color:lightgrey;text-align:center;font-size:16px">THÔNG BÁO ĐĂNG KÍ HỌC</button>
+    <button class="nav-item" style="color:blue;background-color:lightgrey;text-align:center;font-size:16px">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Detail" asp-action="DetailIndex">LỚP HỌC PHẦN</a>
+    </button>
+</div>
+<p style="color:darkviolet;font-size:14px;text-align:center;font-weight:bold;">1.Phân chia website đăng kí học</p>
+<table style="float:left">
+    <tr>
+        <th>Sinh viên năm thứ 1</th>
+        <th>Sinh viên năm thứ 2</th>
+        <th>Sinh viên năm thứ 3</th>
+        <th>Sinh viên từ năm thứ 4</th>
+        <th>Ghi chú</th>
+    </tr>
+    <tr>
+        <td herf="http://dk1.dut.udn.vn/">http://dk1.dut.udn.vn/</td>
+        <td herf="http://dk2.dut.udn.vn/">http://dk2.dut.udn.vn/</td>
+        <td herf="http://dk3.dut.udn.vn/">http://dk3.dut.udn.vn/</td>
+        <td herf="http://dk4.dut.udn.vn/">http://dk4.dut.udn.vn/</td>
+        <td>Sinh viên liên thông, bằng 2, sinh viên từ năm 5: chỉ đăng ký được từ giai đoạn "toàn trường".<br>Nếu bị hạn chế khối lượng học tập thì không đăng ký được ở giai đoạn "theo nhóm".</td>
+    </tr>
+
+</table>
+<p style="color:darkviolet;font-size:12px;text-align:center;font-weight:bold;">Website này dành riêng cho sinh viên năm thứ 2 (SV nhập học năm 2021).<br></p>
+<p style="color:darkviolet;font-size:14px;text-align:center;font-weight:bold;">2. Lịch đăng ký học - Học kỳ 2 năm học 2022-2023</p>
+<table style="float:left">
+    <tr>
+        <th>"ĐK theo nhóm" từ:</th>
+        <th>"ĐK theo nhóm" đến:</th>
+        <th>"ĐK theo khóa" từ:</th>
+        <th>"ĐK theo khóa" đến:</th>
+        <th>"ĐK toàn trường" từ:</th>
+        <th>"ĐK toàn trường" đến:</th>
+        <th>"Hiệu chỉnh ĐK" từ:</th>
+        <th>"Hiệu chỉnh ĐK" đến:</th>
+        <th>"Rút học phần" từ:</th>
+        <th>"ĐK học ghép với khóa mới" từ:</th>
+        <th>"ĐK học ghép với khóa mới" đến:</th>
+    </tr>
+    <tr>
+        <td>07:00:00 <br> 23/11/2022</td>
+        <td>07:00:00 <br> 23/11/2022</td>
+        <td>07:00:00 <br> 23/11/2022</td>
+        <td>07:00:00 <br> 23/11/2022</td>
+        <td>07:00:00 <br> 23/11/2022</td>
+        <td>07:00:00 <br> 23/11/2022</td>
+        <td>07:00:00 <br> 23/11/2022</td>
+        <td>07:00:00 <br> 23/11/2022</td>
+        <td>07:00:00 <br> 23/11/2022</td>
+        <td>07:00:00 <br> 23/11/2022</td>
+        <td>07:00:00 <br> 23/11/2022</td>
+    </tr>
+
+</table>
+<p style="color:blue;font-size:12px;text-align:center;font-weight:bold;">2a.Lịch chi tiết giai đoạn "Đăng kí theo nhóm":</p>
+<table style="float:left">
+    <tr>
+        <th>Sinh viên có số thẻ bắt đầu bằng 3 ký tự:</th>
+        <th>Bắt đầu từ:</th>
+        <th>Kết thúc lúc:</th>
+
+    </tr>
+    <tr>
+        <td>101;102;103;104;105</td>
+        <td>07:00:00 <br> 23/11/2022</td>
+        <td>07:00:00 <br> 23/11/2022</td>
+
+    </tr>
+    <tr>
+        <td>106;107;109;110;111</td>
+        <td>07:00:00 <br> 23/11/2022</td>
+        <td>07:00:00 <br> 23/11/2022</td>
+
+    </tr>
+    <tr>
+        <td>117;118;121;122;123</td>
+        <td>07:00:00 <br> 23/11/2022</td>
+        <td>07:00:00 <br> 23/11/2022</td>
+
+    </tr>
+
+</table>
+
+<p style="color:blue;font-size:12px;text-align:center;font-weight:bold;">2b.Lịch chi tiết giai đoạn "Đăng kí theo khóa":</p>
+<table style="float:left">
+    <tr>
+        <th>Sinh viên có số thẻ bắt đầu bằng 3 ký tự:</th>
+        <th>Bắt đầu từ:</th>
+        <th>Kết thúc lúc:</th>
+
+    </tr>
+    <tr>
+        <td>101;102;103;104;105;106;107;109;110;111;117;118;121;122;123</td>
+        <td>07:00:00 <br> 23/11/2022</td>
+        <td>07:00:00 <br> 23/11/2022</td>
+
+    </tr>
+</table>
+
+<p style="color:blue;font-size:12px;text-align:center;font-weight:bold;">2c.Lịch chi tiết giai đoạn "Đăng kí toàn trường":</p>
+<table style="float:left">
+    <tr>
+        <th>Bắt đầu từ:</th>
+        <th>Kết thúc lúc:</th>
+        <th>ĐK lớp của năm thứ:</th>
+        <th>Định dạng của mã lớp học phần:</th>
+        <th>ĐK dự bị từ:</th>
+        <th>ĐK lớp khác loại từ:</th>
+        <th>ĐK ngoài ngành từ:</th>
+
+    </tr>
+    <tr>
+        <td>07:00:00 <br> 23/11/2022</td>
+        <td>07:00:00 <br> 23/11/2022</td>
+        <td>1,2,3</td>
+        <td>xxxxxxx.2220.22.xx và xxxxxxx.2220.21.xx và xxxxxxx.2220.20.xx</td>
+        <td>07:00:00 <br> 23/11/2022</td>
+        <td>07:00:00 <br> 23/11/2022</td>
+        <td>07:00:00 <br> 23/11/2022</td>
+
+    </tr>
+
+</table>
+
+<p style="color:blue;font-size:12px;text-align:center;font-weight:bold;">2d.Lịch chi tiết "Hiệu chỉnh đăng kí":</p>
+<table style="float:left">
+    <tr>
+        <th>Bắt đầu từ:</th>
+        <th>Kết thúc lúc:</th>
+        <th>ĐK lớp của năm thứ:</th>
+        <th>Định dạng của mã lớp học phần:</th>
+        <th>ĐK dự bị từ:</th>
+        <th>ĐK lớp khác loại từ:</th>
+        <th>ĐK ngoài ngành từ:</th>
+
+    </tr>
+    <tr>
+        <td>07:00:00 <br> 23/11/2022</td>
+        <td>07:00:00 <br> 23/11/2022</td>
+        <td>1,2,3</td>
+        <td>xxxxxxx.2220.22.xx và xxxxxxx.2220.21.xx và xxxxxxx.2220.20.xx</td>
+        <td>07:00:00 <br> 23/11/2022</td>
+        <td>07:00:00 <br> 23/11/2022</td>
+        <td>07:00:00 <br> 23/11/2022</td>
+
+    </tr>
+
+</table>
+
+<p style="color:blue;font-size:12px;text-align:center;font-weight:bold;">2e.Lịch chi tiết "Rút học phần":</p>
+<table style="float:left">
+    <tr>
+        <th>Bắt đầu từ:</th>
+        <th>Kết thúc lúc:</th>
+        <th>ĐK lớp của năm thứ:</th>
+        <th>Định dạng của mã lớp học phần:</th>
+        <th>ĐK dự bị từ:</th>
+        <th>ĐK lớp khác loại từ:</th>
+        <th>ĐK ngoài ngành từ:</th>
+
+    </tr>
+    <tr>
+        <td>07:00:00 <br> 23/11/2022</td>
+        <td>07:00:00 <br> 23/11/2022</td>
+        <td>1,2,3</td>
+        <td>xxxxxxx.2220.22.xx và xxxxxxx.2220.21.xx và xxxxxxx.2220.20.xx</td>
+        <td>07:00:00 <br> 23/11/2022</td>
+        <td>07:00:00 <br> 23/11/2022</td>
+        <td>07:00:00 <br> 23/11/2022</td>
+
+    </tr>
+
+</table>
+
+<p style="color:blue;font-size:12px;text-align:center;font-weight:bold;">2f.Lịch chi tiết "Đăng kí học ghép với khóa mới":</p>
+<table style="float:left">
+    <tr>
+        <th>Bắt đầu từ:</th>
+        <th>Kết thúc lúc:</th>
+        <th>ĐK lớp của năm thứ:</th>
+        <th>Định dạng của mã lớp học phần:</th>
+        <th>ĐK dự bị từ:</th>
+        <th>ĐK lớp khác loại từ:</th>
+        <th>ĐK ngoài ngành từ:</th>
+
+    </tr>
+    <tr>
+        <td>07:00:00 <br> 23/11/2022</td>
+        <td>07:00:00 <br> 23/11/2022</td>
+        <td>1,2,3</td>
+        <td>xxxxxxx.2220.22.xx và xxxxxxx.2220.21.xx và xxxxxxx.2220.20.xx</td>
+        <td>07:00:00 <br> 23/11/2022</td>
+        <td>07:00:00 <br> 23/11/2022</td>
+        <td>07:00:00 <br> 23/11/2022</td>
+
+    </tr>
+
+</table>
+<p style="color:blue;font-size:12px;text-align:center;font-weight:bold;">2g.Lịch chi tiết "Đăng ký nhu cầu mở lớp bổ sung", "Đăng ký lớp mở bổ sung":</p>
+<table style="float:left">
+    <tr>
+        <th>Bắt đầu từ:</th>
+        <th>Kết thúc lúc:</th>
+        <th>Công việc thực hiện:</th>
+
+
+    </tr>
+    <tr>
+        <td>07:00:00 <br> 23/11/2022</td>
+        <td>07:00:00 <br> 23/11/2022</td>
+        <td>
+            Sinh viên đăng ký nhu cầu học để Trường xem xét mở lớp trong học kỳ 2/2022-2023
+        </td>
+
+
+    </tr>
+
+</table>
+

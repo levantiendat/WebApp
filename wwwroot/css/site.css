@@ -1,0 +1,56 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+table {
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 5px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #AFEEEE;
+}
+
+tr:nth-child(odd) {
+    background-color: #F0F8FF;
+}
+
+tr:nth-child(1) {
+    background-color: #0000FF;
+    color: white;
+    outline-color: black;
+    border-inline-color: black;
+}
+
+.dropmenuScroll {
+    height: 300px;
+    max-height: 300px;
+    overflow-y: scroll;
+    position: absolute;
+}
