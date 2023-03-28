@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace WebApp1.Models.Entities;
+namespace WebApp1.Models.Entities1;
 
 public partial class Khoa
 {

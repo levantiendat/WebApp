@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace WebApp1.Models.Entities;
+namespace WebApp1.Models.Entities1;
 
 public partial class DbhocphanContext : DbContext
 {
@@ -20,6 +20,8 @@ public partial class DbhocphanContext : DbContext
     public virtual DbSet<Hocphan> Hocphans { get; set; }
 
     public virtual DbSet<Khoa> Khoas { get; set; }
+
+    public virtual DbSet<Login> Logins { get; set; }
 
     public virtual DbSet<Lophp> Lophps { get; set; }
 
@@ -84,6 +86,20 @@ public partial class DbhocphanContext : DbContext
             entity.Property(e => e.Makhoa)
                 .HasMaxLength(40)
                 .HasColumnName("MAKHOA");
+        });
+
+        modelBuilder.Entity<Login>(entity =>
+        {
+            entity.HasKey(e => e.Mssv).HasName("pk_MSSV_01");
+
+            entity.ToTable("login");
+
+            entity.Property(e => e.Mssv)
+                .HasMaxLength(20)
+                .HasColumnName("MSSV");
+            entity.Property(e => e.Password)
+                .HasMaxLength(40)
+                .HasColumnName("PASSWORD");
         });
 
         modelBuilder.Entity<Lophp>(entity =>
