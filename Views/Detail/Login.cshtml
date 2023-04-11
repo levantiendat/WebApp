@@ -1,0 +1,85 @@
+﻿@model WebApp1.Models.MyAppointments
+@{
+	ViewData["Title"] = "Login";
+	var sinhvien = Model.sinhvien;
+	var lop = Model.lop;
+}
+
+@section Header {
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="container-fluid" style="background-color:mediumblue">
+            <b class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" style="color:white">WEBSITE ĐĂNG KÍ HỌC - TRƯỜNG ĐẠI HỌC BÁCH KHOA - ĐẠI HỌC ĐÀ NẴNG</b>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                </button>
+                <div style="margin-right;color:azure">
+                    @foreach(var item in sinhvien){
+                    <a>@item.NameSV</a>
+                    <a> - @item.LopSH</a>
+                    <a>( @item.MSSV </a>
+                    <a>)</a>
+                    break;
+                    }
+                    
+                    <button class="nav-item" style="color:white;background-color:lightgrey;text-align:center;font-size:10px">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Đăng xuất</a>
+                    </button>
+                    
+                </div>
+        </div>
+    </nav>
+}
+<h1 style="color:red;font-size:20px;font-weight:bold">ĐĂNG KÍ HỌC:</h1>
+<div>
+	<h1 style="color:purple;font-size:14px;margin-left:20px">Học kì 2/2022-2023</h1>
+	<h1 style="color:blue;font-size:14px;margin-left:20px;text-align:center">Hiện nay không phải là thời gian đăng kí học!</h1>
+</div>
+<table class="table">
+
+	<tr>
+		<th>STT</th>
+		<th>Mã lớp</th>
+		<th>Tên lớp học phần</th>
+		<th>TC</th>
+		<th>Giảng viên</th>
+		<th>Thời khóa biểu</th>
+		<th>Tuần</th>
+		<th>(Đ)</th>
+		<th>(K)</th>
+		<th>(T)</th>
+		<th>(G)</th>
+		<th>Học lại</th>
+		<th>Đăng Kí</th>
+		
+		<th>CLC</th>
+	</tr>
+
+
+	@{
+		int j = 1;
+	}
+	@foreach (var item in lop)
+	{
+		<tr>
+			<td>@j</td>
+			<td>@item.MALOPHOCPHAN</td>
+			<td>@item.TENLOP</td>
+			<td>@item.TC</td>
+			<td>@item.GV</td>
+			<td>@item.TKB</td>
+			<td>@item.week</td>
+			<td></td>
+			<td>X</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>@item.DK/@item.SL</td>
+			<td>@item.clc</td>
+		</tr>
+		j++;
+
+
+	}
+</table>
+

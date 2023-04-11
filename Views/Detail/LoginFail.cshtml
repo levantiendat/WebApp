@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "LoginFail";
+}
+
+@section Header {
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid" style="background-color:mediumblue">
+                <b class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" style="color:white">WEBSITE ĐĂNG KÍ HỌC - TRƯỜNG ĐẠI HỌC BÁCH KHOA - ĐẠI HỌC ĐÀ NẴNG</b>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <form style="margin-right;color:red" action="~/Home/CheckingAccount">
+                    <a style="color:white">Số thẻ SV:</a>
+                    <input type="text" name="MSSV">
+                    <a style="color:white">Mật khẩu:</a>
+                    <input type="password" name="Password">
+                    <input type="submit" name="OK" value="Đăng nhập">
+                </form>
+            </div>
+        </nav>
+    </header>
+}
+<h1 style="text-align:center;color:red">Đăng nhập thất bại, thông tin Mã số sinh viên hoặc Mật khẩu không chính xác</h1>

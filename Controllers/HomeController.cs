@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using WebApp1.Models;
+using WebApp1.Models.Entities;
 
 namespace WebApp1.Controllers
 {
@@ -28,5 +29,19 @@ namespace WebApp1.Controllers
 		{
 			return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
 		}
+		
+		public IActionResult CheckingAccount(string MSSV,string Password)
+		{
+			
+            DbhocphanContext db=new DbhocphanContext();
+			var s = db.Logins.Where(p => p.Mssv == MSSV && p.Password == Password).Select(p=>p).FirstOrDefault();
+			if(s!=null)
+			{
+				return RedirectToAction("Login", "Detail", new {mssv=MSSV});
+			}
+			return RedirectToAction("LoginFail", "Detail");
+		}
+		
+		
 	}
 }
